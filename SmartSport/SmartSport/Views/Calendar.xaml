@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sys="clr-namespace:System;assembly=netstandard"
+             xmlns:local="clr-namespace:SmartSport"
+             Title="Календарь"
+             BackgroundColor="White"
+             BackgroundImageSource="background.jpg"
+             x:Class="SmartSport.Views.Calendar">
+    
+    <ContentPage.Content>
+        <RelativeLayout>
+            <Button WidthRequest="50"
+                    HeightRequest="30"
+                    RelativeLayout.XConstraint="{ConstraintExpression
+                Type=RelativeToParent, 
+                Property=Width,
+                Factor=0.15, 
+                Constant=-50}"
+                    RelativeLayout.YConstraint="{ConstraintExpression
+                Type=RelativeToParent,
+                Property=Height,
+                Factor=0.1,
+                Constant=-65}"               
+                Opacity="1"
+                Clicked="BurgerMenuCLicked"
+                CornerRadius="50"
+                ImageSource="burgermenu.png"
+                BackgroundColor="Transparent"/>
+                
+                <Button WidthRequest="50"
+                    HeightRequest="30"
+                    RelativeLayout.XConstraint="{ConstraintExpression
+                Type=RelativeToParent, 
+                Property=Width,
+                Factor=0.8, 
+                Constant=-50}"
+                    RelativeLayout.YConstraint="{ConstraintExpression
+                Type=RelativeToParent,
+                Property=Height,
+                Factor=0.1,
+                Constant=-65}"
+                ImageSource="notification.png"
+                Opacity="1"
+                Clicked="NotificationButtonClicked"
+                CornerRadius="50"
+                BackgroundColor="Transparent"/>
+            <Frame HeightRequest="450"
+                   WidthRequest="320"
+                   RelativeLayout.XConstraint="{ConstraintExpression
+                Type=RelativeToParent,
+                Property=Height,
+                Factor=0.2,
+                Constant= -145}"
+                   RelativeLayout.YConstraint="{ConstraintExpression
+                Type=RelativeToParent,
+                Property=Height,
+                Factor=0.5,
+                Constant= -230}"
+                   CornerRadius="40"
+                   HasShadow="True"
+                   BorderColor="#C5C5C5">
+                <Grid BindingContext="{x:Static local:Views.Calendar.DayOfCurrentMonth}" RowSpacing="20">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="60"></RowDefinition>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Button x:Name="MonthButton"
+                            Text="{Binding StringFormat='{0:MMMM}'}"
+                            Font="Bold"
+                            BackgroundColor="Transparent"
+                            Grid.ColumnSpan="3"
+                            Grid.Row="0" FontSize="24"
+                            TextColor="Black"/>
+                    
+                    <Button Text="{Binding Year, StringFormat='{0}'}"
+                            Font="Medium"
+                            BackgroundColor="Transparent"
+                            Grid.Column="3"
+                            Grid.ColumnSpan="2"
+                            Grid.Row="0" FontSize="24"
+                            TextColor="Black"/>
+                    
+                    <Button ImageSource="left.png"
+                            BackgroundColor="Transparent"
+                            Grid.Column="5"
+                            Grid.Row="0"
+                            Clicked="LeftButtonClicked"/>
+
+                    <Button ImageSource="right.png"
+                            BackgroundColor="Transparent"
+                            Grid.Column="6"
+                            Grid.Row="0"
+                            Clicked="RightButtonCLicked"/>
+                    
+                    <Label Text="Пн"
+                           HorizontalOptions="Center"
+                           TextColor="#9CBABB"
+                           Grid.Row="1"
+                           Grid.Column="0"/>
+                    
+                    <Label Text="Вт"
+                           HorizontalOptions="Center"
+                           TextColor="#9CBABB"
+                           Grid.Row="1"
+                           Grid.Column="1"/>
+                    
+                    <Label Text="Ср"
+                           HorizontalOptions="Center"
+                           TextColor="#9CBABB"
+                           Grid.Row="1"
+                           Grid.Column="2"/>
+
+                    <Label Text="Чт"
+                           HorizontalOptions="Center"
+                           TextColor="#9CBABB"
+                           Grid.Row="1"
+                           Grid.Column="3"/>
+
+                    <Label Text="Пт"
+                           HorizontalOptions="Center"
+                           TextColor="#9CBABB"
+                           Grid.Row="1"
+                           Grid.Column="4"/>
+                    
+                    <Label Text="Сб"
+                           HorizontalOptions="Center"
+                           TextColor="#D28EE4"
+                           Grid.Row="1"
+                           Grid.Column="5"/>
+
+                    <Label Text="Вс"
+                           HorizontalOptions="Center"
+                           TextColor="#D28EE4"
+                           Grid.Row="1"
+                           Grid.Column="6"/>
+                        
+                    <Grid x:Name="CalendarGrid"
+                          Grid.ColumnSpan="7" Grid.Column="0"
+                          Grid.Row="2"
+                          Grid.RowSpan="6">
+                       
+                    </Grid>
+                </Grid>
+            </Frame>
+            <Frame RelativeLayout.WidthConstraint="400"
+                   RelativeLayout.HeightConstraint="700"
+                   RelativeLayout.YConstraint="740"
+                   RelativeLayout.XConstraint="-5"
+                   CornerRadius="30"
+                   BackgroundColor="White"                
+                   HasShadow="True"
+                   BorderColor="#F3EBEB">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="35" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions >
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.Column="0" Grid.Row="0" BackgroundColor="Transparent" ImageSource="home.png"></Button>
+                    <Button Grid.Column="1" Grid.Row="0" BackgroundColor="Transparent" ImageSource="search.png"></Button>
+                    <Button Grid.Column="2" Grid.Row="0" BackgroundColor="Transparent" ImageSource="add.png"></Button>
+                    <Button Grid.Column="3" Grid.Row="0" BackgroundColor="Transparent" ImageSource="favorite.png"></Button>
+                    <Button Grid.Column="4" Grid.Row="0" BackgroundColor="Transparent" ImageSource="calendar_colour.jpg"></Button>
+                </Grid>
+            </Frame>
+        </RelativeLayout>
+    </ContentPage.Content>
+</ContentPage>

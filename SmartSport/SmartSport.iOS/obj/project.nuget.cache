@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "sJ6LCzWHTf4f7l9dryAeaWRUf/fpzXp5br/6aFNPw7lXiPBMe3GzUdJHUcerwYXhFK0PwHzsR3Ol43pozNk3AA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\amate\\Desktop\\SmartSport\\SmartSport\\SmartSport.iOS\\SmartSport.iOS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\amate\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\amate\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
+    "C:\\Users\\amate\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512"
+  ],
+  "logs": []
+}

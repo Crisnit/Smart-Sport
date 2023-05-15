@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "PTEnf6YDT5wB/aEk93j0sTVPX5D3mpDFFNBBBh1TwFaZZAATf9H3kcpucuss0lkEWH81imI3tnTGipEYlsKzkw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\amate\\Desktop\\SmartSport\\SmartSport\\SmartSport\\SmartSport.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\amate\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\amate\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\amate\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\amate\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
+    "C:\\Users\\amate\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512"
+  ],
+  "logs": []
+}
