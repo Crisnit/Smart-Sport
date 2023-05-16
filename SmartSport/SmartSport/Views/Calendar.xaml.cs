@@ -1,20 +1,11 @@
-﻿using Android.Widget;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿using System;
 using Xamarin.Forms;
-using Xamarin.Forms.Internals;
-using Xamarin.Forms.PlatformConfiguration.AndroidSpecific;
 using Xamarin.Forms.Xaml;
 
 namespace SmartSport.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Calendar : ContentPage
+    public partial class Calendar
     {
         public Calendar()
         {
@@ -27,47 +18,74 @@ namespace SmartSport.Views
         {
             new MainPage();
         }
-        public void BurgerMenuCLicked(object sender, EventArgs e)
+
+        private void BurgerMenuCLicked(object sender, EventArgs e)
         {
             new MainPage();
         }
-        public void NotificationButtonClicked(object sender, EventArgs e)
+
+        private void NotificationButtonClicked(object sender, EventArgs e)
         {
             new MainPage();
         }
         
         public static DateTime DayOfCurrentMonth = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1);
 
-        public void CalendarRender(DateTime dayOfMonth)
+        private void ButtonRender(DateTime day, int column, int row)
+        {
+            if (day.Month != DayOfCurrentMonth.Month)
+            {
+                CalendarGrid.Children.Add(new Button { BackgroundColor = Color.White, WidthRequest = 50, HeightRequest = 40, CornerRadius = 200, Text = day.Day.ToString(), TextColor =Color.FromHex("#9CBABB"), FontAttributes = FontAttributes.Bold, FontSize = 14}, column, row);
+            }
+
+            else if ((int)day.DayOfWeek!=0 && (int)day.DayOfWeek!=6)
+            {
+                CalendarGrid.Children.Add(new Button { BackgroundColor = Color.White, WidthRequest = 50, HeightRequest = 40, CornerRadius = 200, Text = day.Day.ToString(), TextColor = Color.Black, FontAttributes = FontAttributes.Bold, FontSize = 14 }, column, row);
+            }
+            else
+            {
+                CalendarGrid.Children.Add(new Button { BackgroundColor = Color.White, WidthRequest = 50, HeightRequest = 40, CornerRadius = 200, Text = day.Day.ToString(), TextColor = Color.FromHex("#D28EE4"), FontAttributes = FontAttributes.Bold , FontSize = 14}, column, row);
+            }
+        }
+
+        private void CalendarRender(DateTime dayOfMonth)
         {
             DateTime dayOfPreviousMonth= dayOfMonth.AddDays(-1);
             if ((int)dayOfPreviousMonth.DayOfWeek!=0)
             {
                 while((int)dayOfPreviousMonth.DayOfWeek>0)
                 {
-                    CalendarGrid.Children.Add(new Xamarin.Forms.Button { BackgroundColor = Color.White, WidthRequest = 50, HeightRequest = 40, CornerRadius = 200, Text = dayOfPreviousMonth.Day.ToString(), TextColor =Color.FromHex("#9CBABB"), FontAttributes = FontAttributes.Bold, FontSize = 14}, (int)dayOfPreviousMonth.DayOfWeek-1, 0);
+                    ButtonRender(dayOfPreviousMonth, (int)dayOfPreviousMonth.DayOfWeek-1, 0);
                     dayOfPreviousMonth = dayOfPreviousMonth.AddDays(-1);
                 }
             }
 
             if ((int)dayOfMonth.DayOfWeek == 0)
             {
-                CalendarGrid.Children.Add(new Xamarin.Forms.Button { BackgroundColor = Color.White, WidthRequest = 50, HeightRequest = 40, CornerRadius = 200, Text = dayOfMonth.Day.ToString(), TextColor = Color.Black, FontAttributes = FontAttributes.Bold, FontSize = 14 }, 6, 0);
+                ButtonRender(dayOfMonth, 6, 0);
                 dayOfMonth = dayOfMonth.AddDays(1);
             }
             else
             {
                 for (int dayOfFirstWeek = (int)dayOfMonth.DayOfWeek - 1; dayOfFirstWeek < 7; dayOfFirstWeek++)
                 {
-                    CalendarGrid.Children.Add(new Xamarin.Forms.Button { BackgroundColor = Color.White, WidthRequest = 50, HeightRequest = 40, CornerRadius = 200, Text = dayOfMonth.Day.ToString(), TextColor = Color.Black, FontAttributes = FontAttributes.Bold, FontSize = 14 }, dayOfFirstWeek, 0);
-                    dayOfMonth = dayOfMonth.AddDays(1);
+                    if ((int)dayOfMonth.DayOfWeek!=6 && (int)dayOfMonth.DayOfWeek!=0)
+                    {
+                        ButtonRender(dayOfMonth, dayOfFirstWeek, 0);
+                        dayOfMonth = dayOfMonth.AddDays(1);
+                    }
+                    else
+                    {
+                        ButtonRender(dayOfMonth, dayOfFirstWeek, 0);
+                        dayOfMonth = dayOfMonth.AddDays(1);
+                    }
                 }
             }
             for (int week = 1; week < 6; week++)
             {
                 for (int day = 0; day < 7; day++)
                 {
-                    CalendarGrid.Children.Add(new Xamarin.Forms.Button { BackgroundColor = Color.White, WidthRequest = 50, HeightRequest = 40, CornerRadius = 200, Text = dayOfMonth.Day.ToString(), TextColor = Color.Black, FontAttributes = FontAttributes.Bold , FontSize = 14}, day, week);
+                    ButtonRender(dayOfMonth, day, week);
                     dayOfMonth = dayOfMonth.AddDays(1);
                 }
             }

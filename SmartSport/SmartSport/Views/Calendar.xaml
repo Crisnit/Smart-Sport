@@ -60,7 +60,7 @@
                    CornerRadius="40"
                    HasShadow="True"
                    BorderColor="#C5C5C5">
-                <Grid BindingContext="{x:Static local:Views.Calendar.DayOfCurrentMonth}" RowSpacing="20">
+                <Grid RowSpacing="20">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition />
                         <ColumnDefinition />
@@ -81,14 +81,16 @@
                         <RowDefinition />
                     </Grid.RowDefinitions>
                     <Button x:Name="MonthButton"
+                            BindingContext="{x:Static local:Views.Calendar.DayOfCurrentMonth}"
                             Text="{Binding StringFormat='{0:MMMM}'}"
                             Font="Bold"
                             BackgroundColor="Transparent"
                             Grid.ColumnSpan="3"
-                            Grid.Row="0" FontSize="24"
+                            Grid.Row="0" FontSize="20"
                             TextColor="Black"/>
                     
-                    <Button Text="{Binding Year, StringFormat='{0}'}"
+                    <Button BindingContext="{x:Static local:Views.Calendar.DayOfCurrentMonth}"
+                            Text="{Binding Year, StringFormat='{0}'}"
                             Font="Medium"
                             BackgroundColor="Transparent"
                             Grid.Column="3"
