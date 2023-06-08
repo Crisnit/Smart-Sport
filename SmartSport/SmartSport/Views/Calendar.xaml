@@ -28,7 +28,7 @@
                 ImageSource="burgermenu.png"
                 BackgroundColor="Transparent"/>
                 
-                <Button WidthRequest="50"
+            <Button WidthRequest="50"
                     HeightRequest="30"
                     RelativeLayout.XConstraint="{ConstraintExpression
                 Type=RelativeToParent, 

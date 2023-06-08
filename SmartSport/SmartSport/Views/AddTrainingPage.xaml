@@ -18,11 +18,11 @@
                 Property=Height,
                 Factor=0.1,
                 Constant=-65}"               
-                    Opacity="1"
-                    Clicked="BurgerMenuCLicked"
-                    CornerRadius="50"
-                    ImageSource="burgermenu.png"
-                    BackgroundColor="Transparent"/>
+                Opacity="1"
+                Clicked="BurgerMenuCLicked"
+                CornerRadius="50"
+                ImageSource="burgermenu.png"
+                BackgroundColor="Transparent"/>
             <Button WidthRequest="50"
                     HeightRequest="30"
                     RelativeLayout.XConstraint="{ConstraintExpression
@@ -40,6 +40,84 @@
                     Clicked="NotificationButtonClicked"
                     CornerRadius="50"
                     BackgroundColor="Transparent"/>
+            <Frame BackgroundColor="White"
+                   BorderColor="#C5C5C5"
+                   HasShadow="True"
+                   RelativeLayout.HeightConstraint="700"
+                   RelativeLayout.WidthConstraint="400"
+                   RelativeLayout.XConstraint="{ConstraintExpression
+                    Type=RelativeToParent,
+                    Property=Width,
+                    Factor=0}"
+                      RelativeLayout.YConstraint="{ConstraintExpression
+                    Type=RelativeToParent,
+                    Property=Height,
+                    Factor=0.08
+                    }">
+                <ScrollView>
+                    <StackLayout Spacing="20">
+                    <Label
+                       Text="Новая тренировка"
+                       TextColor="#18ABB2"
+                       FontSize="24"
+                       FontAttributes="Bold"
+                       HorizontalOptions="Center"/>
+
+                    <Label 
+                       Text="Выбрать дату:" 
+                       TextColor="#9CBABB"
+                       FontSize="14"/>
+                        <Frame 
+                           BorderColor="#C5C5C5"
+                           CornerRadius="30">
+                            <DatePicker IsVisible="True" Format="dd/MM/yyyy"></DatePicker>
+                        </Frame>
+                        <Label 
+                           Text="Выбрать время:" 
+                           TextColor="#9CBABB"
+                           FontSize="14"/>
+                        <Frame BorderColor="#C5C5C5"
+                           CornerRadius="30">
+                            <TimePicker Format="hh:mm"></TimePicker>
+                        </Frame>
+                        <Label 
+                           Text="Добавить заметку:" 
+                           TextColor="#9CBABB"
+                           FontSize="14"/>
+                        <Frame BorderColor="#C5C5C5"
+                           CornerRadius="30">
+                            <Editor TextColor="#9CBABB" Placeholder="Введите текст" PlaceholderColor="#9CBABB"
+                                    HeightRequest="80"></Editor>
+                        </Frame>
+                    </StackLayout>
+                </ScrollView>
+            </Frame>
+            <Frame RelativeLayout.WidthConstraint="400"
+                   RelativeLayout.HeightConstraint="700"
+                   RelativeLayout.YConstraint="740"
+                   RelativeLayout.XConstraint="-5"
+                   CornerRadius="30"
+                   BackgroundColor="White"                
+                   HasShadow="True"
+                   BorderColor="#F3EBEB">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="35" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions >
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.Column="0" Grid.Row="0" BackgroundColor="Transparent" ImageSource="home.png"></Button>
+                    <Button Grid.Column="1" Grid.Row="0" BackgroundColor="Transparent" ImageSource="search.png"></Button>
+                    <Button Grid.Column="2" Grid.Row="0" BackgroundColor="Transparent" ImageSource="add.png"></Button>
+                    <Button Grid.Column="3" Grid.Row="0" BackgroundColor="Transparent" ImageSource="favorite.png"></Button>
+                    <Button Grid.Column="4" Grid.Row="0" BackgroundColor="Transparent" ImageSource="calendar_colour.jpg"></Button>
+                </Grid>
+            </Frame>
         </RelativeLayout>
     </ContentPage.Content>
 </ContentPage>
