@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SmartSport.Views.AddTrainingPage"
+             BackgroundColor="White">
+    <ContentPage.Content>
+        <RelativeLayout>
+            <Button WidthRequest="50"
+                    HeightRequest="30"
+                    RelativeLayout.XConstraint="{ConstraintExpression
+                Type=RelativeToParent, 
+                Property=Width,
+                Factor=0.15, 
+                Constant=-50}"
+                    RelativeLayout.YConstraint="{ConstraintExpression
+                Type=RelativeToParent,
+                Property=Height,
+                Factor=0.1,
+                Constant=-65}"               
+                    Opacity="1"
+                    Clicked="BurgerMenuCLicked"
+                    CornerRadius="50"
+                    ImageSource="burgermenu.png"
+                    BackgroundColor="Transparent"/>
+            <Button WidthRequest="50"
+                    HeightRequest="30"
+                    RelativeLayout.XConstraint="{ConstraintExpression
+                Type=RelativeToParent, 
+                Property=Width,
+                Factor=0.8, 
+                Constant=-50}"
+                    RelativeLayout.YConstraint="{ConstraintExpression
+                Type=RelativeToParent,
+                Property=Height,
+                Factor=0.1,
+                Constant=-65}"
+                    ImageSource="notification.png"
+                    Opacity="1"
+                    Clicked="NotificationButtonClicked"
+                    CornerRadius="50"
+                    BackgroundColor="Transparent"/>
+        </RelativeLayout>
+    </ContentPage.Content>
+</ContentPage>
