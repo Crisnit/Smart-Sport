@@ -48,6 +48,7 @@ C:\Users\amate\Desktop\SmartSport\SmartSport\SmartSport.Android\obj\Debug\120\an
 C:\Users\amate\Desktop\SmartSport\SmartSport\SmartSport.Android\obj\Debug\120\android\bin\base.zip
 C:\Users\amate\Desktop\SmartSport\SmartSport\SmartSport.Android\obj\Debug\120\android\bin\com.companyname.smartsport.aab
 C:\Users\amate\Desktop\SmartSport\SmartSport\SmartSport.Android\obj\Debug\120\android\bin\com.companyname.smartsport.apks
+C:\Users\amate\Desktop\SmartSport\SmartSport\SmartSport.Android\obj\Debug\120\res\drawable\calendar_colour.jpg
 C:\Users\amate\Desktop\SmartSport\SmartSport\SmartSport.Android\obj\Debug\120\res\values\styles.xml
 C:\Users\amate\Desktop\SmartSport\SmartSport\SmartSport.Android\obj\Debug\120\res\values\colors.xml
 C:\Users\amate\Desktop\SmartSport\SmartSport\SmartSport.Android\obj\Debug\120\res\mipmap-anydpi-v26\icon.xml
@@ -62,6 +63,15 @@ C:\Users\amate\Desktop\SmartSport\SmartSport\SmartSport.Android\obj\Debug\120\re
 C:\Users\amate\Desktop\SmartSport\SmartSport\SmartSport.Android\obj\Debug\120\res\mipmap-xxhdpi\launcher_foreground.png
 C:\Users\amate\Desktop\SmartSport\SmartSport\SmartSport.Android\obj\Debug\120\res\mipmap-xxxhdpi\icon.png
 C:\Users\amate\Desktop\SmartSport\SmartSport\SmartSport.Android\obj\Debug\120\res\mipmap-xxxhdpi\launcher_foreground.png
+C:\Users\amate\Desktop\SmartSport\SmartSport\SmartSport.Android\obj\Debug\120\res\drawable\burgermenu.png
+C:\Users\amate\Desktop\SmartSport\SmartSport\SmartSport.Android\obj\Debug\120\res\drawable\background.jpg
+C:\Users\amate\Desktop\SmartSport\SmartSport\SmartSport.Android\obj\Debug\120\res\drawable\notification.png
+C:\Users\amate\Desktop\SmartSport\SmartSport\SmartSport.Android\obj\Debug\120\res\drawable\right.png
+C:\Users\amate\Desktop\SmartSport\SmartSport\SmartSport.Android\obj\Debug\120\res\drawable\left.png
+C:\Users\amate\Desktop\SmartSport\SmartSport\SmartSport.Android\obj\Debug\120\res\drawable\home.png
+C:\Users\amate\Desktop\SmartSport\SmartSport\SmartSport.Android\obj\Debug\120\res\drawable\search.png
+C:\Users\amate\Desktop\SmartSport\SmartSport\SmartSport.Android\obj\Debug\120\res\drawable\add.png
+C:\Users\amate\Desktop\SmartSport\SmartSport\SmartSport.Android\obj\Debug\120\res\drawable\favorite.png
 C:\Users\amate\Desktop\SmartSport\SmartSport\SmartSport.Android\obj\Debug\120\uploadflags.txt
 C:\Users\amate\Desktop\SmartSport\SmartSport\SmartSport.Android\obj\Debug\120\resolvedassemblies.hash
 C:\Users\amate\Desktop\SmartSport\SmartSport\SmartSport.Android\obj\Debug\120\android\assets\FormsViewGroup.dll
@@ -636,13 +646,3 @@ C:\Users\amate\Desktop\SmartSport\SmartSport\SmartSport.Android\obj\Debug\120\st
 C:\Users\amate\Desktop\SmartSport\SmartSport\SmartSport.Android\obj\Debug\120\stamp\_GenerateJavaStubs.stamp
 C:\Users\amate\Desktop\SmartSport\SmartSport\SmartSport.Android\obj\Debug\120\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\amate\Desktop\SmartSport\SmartSport\SmartSport.Android\obj\Debug\120\stamp\_ResolveLibraryProjectImports.stamp
-C:\Users\amate\Desktop\SmartSport\SmartSport\SmartSport.Android\obj\Debug\120\res\drawable\burgermenu.png
-C:\Users\amate\Desktop\SmartSport\SmartSport\SmartSport.Android\obj\Debug\120\res\drawable\notification.png
-C:\Users\amate\Desktop\SmartSport\SmartSport\SmartSport.Android\obj\Debug\120\res\drawable\left.png
-C:\Users\amate\Desktop\SmartSport\SmartSport\SmartSport.Android\obj\Debug\120\res\drawable\right.png
-C:\Users\amate\Desktop\SmartSport\SmartSport\SmartSport.Android\obj\Debug\120\res\drawable\background.jpg
-C:\Users\amate\Desktop\SmartSport\SmartSport\SmartSport.Android\obj\Debug\120\res\drawable\home.png
-C:\Users\amate\Desktop\SmartSport\SmartSport\SmartSport.Android\obj\Debug\120\res\drawable\search.png
-C:\Users\amate\Desktop\SmartSport\SmartSport\SmartSport.Android\obj\Debug\120\res\drawable\add.png
-C:\Users\amate\Desktop\SmartSport\SmartSport\SmartSport.Android\obj\Debug\120\res\drawable\favorite.png
-C:\Users\amate\Desktop\SmartSport\SmartSport\SmartSport.Android\obj\Debug\120\res\drawable\calendar_colour.jpg

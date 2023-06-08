@@ -18,3 +18,4 @@ C:\Users\amate\Desktop\SmartSport\SmartSport\SmartSport\bin\Debug\netstandard2.0
 C:\Users\amate\Desktop\SmartSport\SmartSport\SmartSport\bin\Debug\netstandard2.0\Mono.Android.pdb
 C:\Users\amate\Desktop\SmartSport\SmartSport\SmartSport\bin\Debug\netstandard2.0\Mono.Android.xml
 C:\Users\amate\Desktop\SmartSport\SmartSport\SmartSport\obj\Debug\netstandard2.0\SmartSport.csproj.CopyComplete
+C:\Users\amate\Desktop\SmartSport\SmartSport\SmartSport\obj\Debug\netstandard2.0\Views\AddTrainingPage.xaml.g.cs

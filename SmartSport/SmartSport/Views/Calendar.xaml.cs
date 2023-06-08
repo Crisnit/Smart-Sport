@@ -104,5 +104,10 @@ namespace SmartSport.Views
             CalendarGrid.Resources.Clear();
             CalendarRender(DayOfCurrentMonth);
         }
+
+        private async void AddTrainingButton(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new AddTrainingPage(), true);
+        }
     }
 }

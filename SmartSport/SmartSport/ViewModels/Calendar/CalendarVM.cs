@@ -1,7 +1,4 @@
-﻿using Android.App;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System;
 
 namespace SmartSport.ViewModels.Calendar
 {
