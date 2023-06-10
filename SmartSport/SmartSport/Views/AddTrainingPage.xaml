@@ -45,6 +45,7 @@
                     Clicked="NotificationButtonClicked"
                     CornerRadius="50"
                     BackgroundColor="Transparent"/>
+            
             <Frame BackgroundColor="White"
                    BorderColor="#C5C5C5"
                    HasShadow="True"
@@ -68,38 +69,73 @@
                        FontAttributes="Bold"
                        HorizontalOptions="Center"/>
 
-                    <Label 
+                    <Label
                        Text="Выбрать дату:" 
                        TextColor="#9CBABB"
                        FontAttributes="Bold"
                        FontSize="14"/>
-                        <Frame 
-                            BorderColor="#9CBABB"
+                    <Frame
+                        BorderColor="#9CBABB"
+                        CornerRadius="30" HasShadow="False">
+                        <DatePicker TextColor="#9CBABB" Format="dd/MM/yyyy"/>
+                    </Frame>
+                    <Label 
+                        Text="Выбрать время:" 
+                        TextColor="#9CBABB"
+                        FontSize="14"
+                        FontAttributes="Bold"/>
+                    <Frame BorderColor="#9CBABB"
                            CornerRadius="30" HasShadow="False">
-                            <DatePicker TextColor="#9CBABB" Format="dd/MM/yyyy"/>
-                        </Frame>
-                        <Label 
-                           Text="Выбрать время:" 
+                           <TimePicker TextColor ="#9CBABB" Format="hh:mm"></TimePicker>
+                    </Frame>
+                    <Label 
+                        Text="Добавить заметку:" 
+                        TextColor="#9CBABB"
+                        FontSize="14"
+                        FontAttributes="Bold"/>
+                    <Frame BorderColor="#9CBABB"
+                           CornerRadius="30" HasShadow="False">
+                        <Editor TextColor="#9CBABB" Placeholder="Введите текст" PlaceholderColor="#9CBABB"
+                                HeightRequest="80"></Editor>
+                    </Frame>
+                    <Label Text="Добавить новое видео:" 
                            TextColor="#9CBABB"
                            FontSize="14"
                            FontAttributes="Bold"/>
-                        <Frame BorderColor="#9CBABB"
-                           CornerRadius="30" HasShadow="False">
-                            <TimePicker TextColor ="#9CBABB" Format="hh:mm"></TimePicker>
-                        </Frame>
-                        <Label 
-                           Text="Добавить заметку:" 
+                    <StackLayout Spacing="10">
+                    <Button ContentLayout="0"
+                            Padding="0"
+                            HorizontalOptions="Start"
+                            BackgroundColor="Transparent" 
+                            ImageSource="favouritesButton.png" 
+                            Text="Смотреть избранные"
+                            TextColor="#9CBABB"
+                            FontAttributes="Bold"
+                            WidthRequest="215" 
+                            HeightRequest="15"
+                            Margin="-5,0,0,0"
+                            FontSize="14"/>
+                    <Button ContentLayout="32"
+                            Padding="0"
+                            HorizontalOptions="Start"
+                            BackgroundColor="Transparent" 
+                            ImageSource="searchButton.png" 
+                            Text="Поиск"
+                            TextColor="#9CBABB"
+                            FontAttributes="Bold"
+                            WidthRequest="90"
+                            HeightRequest="15"
+                            Margin="-5,0,0,0"
+                            FontSize="14"/>
+                    </StackLayout>
+                    <Label Text="Прикрепленные видео:" 
                            TextColor="#9CBABB"
                            FontSize="14"
                            FontAttributes="Bold"/>
-                        <Frame BorderColor="#9CBABB"
-                           CornerRadius="30" HasShadow="False">
-                            <Editor TextColor="#9CBABB" Placeholder="Введите текст" PlaceholderColor="#9CBABB"
-                                    HeightRequest="80"></Editor>
-                        </Frame>
                     </StackLayout>
                 </ScrollView>
             </Frame>
+           
             <Frame RelativeLayout.WidthConstraint="400"
                    RelativeLayout.HeightConstraint="700"
                    RelativeLayout.YConstraint="740"
