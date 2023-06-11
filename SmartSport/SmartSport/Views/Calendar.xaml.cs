@@ -35,16 +35,19 @@ namespace SmartSport.Views
         {
             if (day.Month != DayOfCurrentMonth.Month)
             {
-                CalendarGrid.Children.Add(new Button { BackgroundColor = Color.White, WidthRequest = 50, HeightRequest = 40, CornerRadius = 200, Text = day.Day.ToString(), TextColor =Color.FromHex("#9CBABB"), FontAttributes = FontAttributes.Bold, FontSize = 14}, column, row);
+                CalendarGrid.Children.Add(new Button { BackgroundColor = Color.White, WidthRequest = 40, HeightRequest = 40, Padding=9, CornerRadius = 1000, Text = day.ToString("dd.MM.yyyy"), TextColor =Color.FromHex("#9CBABB"), FontAttributes = FontAttributes.Bold, FontSize = 16}, column, row);
             }
-
+            else if(day==DateTime.Today)
+            {
+                CalendarGrid.Children.Add(new Button { BackgroundColor = Color.FromHex("#9CBABB"), WidthRequest = 40, HeightRequest = 40, Padding = 9, CornerRadius = 1000, Text = day.ToString("dd.MM.yyyy"), TextColor = Color.White, FontAttributes = FontAttributes.Bold, FontSize = 16}, column, row);
+            }
             else if ((int)day.DayOfWeek!=0 && (int)day.DayOfWeek!=6)
             {
-                CalendarGrid.Children.Add(new Button { BackgroundColor = Color.White, WidthRequest = 50, HeightRequest = 40, CornerRadius = 200, Text = day.Day.ToString(), TextColor = Color.Black, FontAttributes = FontAttributes.Bold, FontSize = 14 }, column, row);
+                CalendarGrid.Children.Add(new Button { BackgroundColor = Color.White, WidthRequest = 40, HeightRequest = 40, Padding = 9, CornerRadius = 1000, Text = day.ToString("dd.MM.yyyy"), TextColor = Color.Black, FontAttributes = FontAttributes.Bold, FontSize = 16}, column, row);
             }
             else
             {
-                CalendarGrid.Children.Add(new Button { BackgroundColor = Color.White, WidthRequest = 50, HeightRequest = 40, CornerRadius = 200, Text = day.Day.ToString(), TextColor = Color.FromHex("#D28EE4"), FontAttributes = FontAttributes.Bold , FontSize = 14}, column, row);
+                CalendarGrid.Children.Add(new Button { BackgroundColor = Color.White, WidthRequest = 40, HeightRequest = 40, Padding = 9, CornerRadius = 1000, Text = day.ToString("dd.MM.yyyy"), TextColor = Color.FromHex("#D28EE4"), FontAttributes = FontAttributes.Bold , FontSize = 16}, column, row);
             }
         }
 

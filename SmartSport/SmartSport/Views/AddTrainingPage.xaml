@@ -135,32 +135,22 @@
                     </StackLayout>
                 </ScrollView>
             </Frame>
-           
+
             <Frame RelativeLayout.WidthConstraint="400"
-                   RelativeLayout.HeightConstraint="700"
-                   RelativeLayout.YConstraint="740"
+                   RelativeLayout.HeightConstraint="95"
+                   RelativeLayout.YConstraint="725"
                    RelativeLayout.XConstraint="-5"
                    CornerRadius="30"
                    BackgroundColor="White"                
                    HasShadow="True"
                    BorderColor="#F3EBEB">
-                <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="35" />
-                    </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions >
-                        <ColumnDefinition Width="*"></ColumnDefinition>
-                        <ColumnDefinition Width="*"></ColumnDefinition>
-                        <ColumnDefinition Width="*"></ColumnDefinition>
-                        <ColumnDefinition Width="*"></ColumnDefinition>
-                        <ColumnDefinition Width="*"></ColumnDefinition>
-                    </Grid.ColumnDefinitions>
-                    <Button Grid.Column="0" Grid.Row="0" BackgroundColor="Transparent" ImageSource="home.png"></Button>
-                    <Button Grid.Column="1" Grid.Row="0" BackgroundColor="Transparent" ImageSource="search.png"></Button>
-                    <Button Grid.Column="2" Grid.Row="0" BackgroundColor="Transparent" ImageSource="add.png"></Button>
-                    <Button Grid.Column="3" Grid.Row="0" BackgroundColor="Transparent" ImageSource="favorite.png"></Button>
-                    <Button Grid.Column="4" Grid.Row="0" BackgroundColor="Transparent" ImageSource="calendar_colour.jpg"></Button>
-                </Grid>
+                <StackLayout Orientation="Horizontal" Spacing="30">
+                    <Button BackgroundColor="Transparent" ImageSource="home.png" WidthRequest="48"></Button>
+                    <Button BackgroundColor="Transparent" ImageSource="search.png" WidthRequest="48"></Button>
+                    <Button BackgroundColor="Transparent" ImageSource="add.png" WidthRequest="48"></Button>
+                    <Button BackgroundColor="Transparent" ImageSource="favorite.png" WidthRequest="48"></Button>
+                    <Button BackgroundColor="Transparent" ImageSource="calendar.png" WidthRequest="48" Clicked="CalendarButtonClicked"></Button>
+                </StackLayout>
             </Frame>
         </RelativeLayout>
     </ContentPage.Content>

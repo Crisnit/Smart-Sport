@@ -27,5 +27,9 @@ namespace SmartSport.Views
         {
             throw new NotImplementedException();
         }
+        async void CalendarButtonClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Calendar(), true);
+        }
     }
 }
