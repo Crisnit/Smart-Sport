@@ -12,7 +12,7 @@ namespace SmartSport
         {
             InitializeComponent();
 
-            MainPage = new Xamarin.Forms.NavigationPage(new Calendar());
+            MainPage = new Xamarin.Forms.NavigationPage(new CarouselViewPage());
         }
 
         protected override void OnStart()
