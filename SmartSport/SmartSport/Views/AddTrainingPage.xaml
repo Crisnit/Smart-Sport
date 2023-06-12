@@ -138,7 +138,7 @@
 
             <Frame RelativeLayout.WidthConstraint="400"
                    RelativeLayout.HeightConstraint="95"
-                   RelativeLayout.YConstraint="725"
+                   RelativeLayout.YConstraint="730"
                    RelativeLayout.XConstraint="-5"
                    CornerRadius="30"
                    BackgroundColor="White"                

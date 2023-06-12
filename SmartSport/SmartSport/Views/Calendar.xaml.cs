@@ -12,6 +12,8 @@ namespace SmartSport.Views
             InitializeComponent();
             CalendarRender(DayOfCurrentMonth);
             NavigationPage.SetHasNavigationBar(this, false);
+            MonthButton.Text = DayOfCurrentMonth.ToString("MMMM");
+            YearButton.Text = DayOfCurrentMonth.ToString("yyyy");
         }       
 
         private void ButtonClicked(object sender, EventArgs e)
@@ -97,6 +99,8 @@ namespace SmartSport.Views
         private void RightButtonCLicked(object sender, EventArgs e)
         {
             DayOfCurrentMonth = DayOfCurrentMonth.AddMonths(1);
+            MonthButton.Text = DayOfCurrentMonth.ToString("MMMM");
+            YearButton.Text = DayOfCurrentMonth.ToString("yyyy");
             CalendarGrid.Resources.Clear();
             CalendarRender(DayOfCurrentMonth);
         }
@@ -104,6 +108,8 @@ namespace SmartSport.Views
         private void LeftButtonClicked(object sender, EventArgs e)
         {
             DayOfCurrentMonth = DayOfCurrentMonth.AddMonths(-1);
+            MonthButton.Text = DayOfCurrentMonth.ToString("MMMM");
+            YearButton.Text = DayOfCurrentMonth.ToString("yyyy");
             CalendarGrid.Resources.Clear();
             CalendarRender(DayOfCurrentMonth);
         }
