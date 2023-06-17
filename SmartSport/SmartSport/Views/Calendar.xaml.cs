@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SmartSport.Models;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -116,7 +117,10 @@ namespace SmartSport.Views
 
         private async void AddTrainingButton(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new AddTrainingPage(), true);
+            Training training = new Training();
+            AddTrainingPage addTrainingPage = new AddTrainingPage();
+            addTrainingPage.BindingContext = training;
+            await Navigation.PushAsync(addTrainingPage);
         }
     }
 }
