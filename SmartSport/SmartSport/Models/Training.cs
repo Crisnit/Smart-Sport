@@ -15,7 +15,7 @@ namespace SmartSport.Models
         {
             TrainingDateTime = DateTime.Now;
             Note = "1";
-            VideoID = 1;
+            VideoId = 1;
             StringDate= TrainingDateTime.ToString("d");
             StringTime = TrainingDateTime.TimeOfDay.ToString("hh\\:mm");
             NotificationText = "Ваша тренировка начнётся " + StringDate + " в " + StringTime;
@@ -28,7 +28,7 @@ namespace SmartSport.Models
 
         public string Note { get; set; }
 
-        public int VideoID { get; set; }
+        public int VideoId { get; set; }
 
         public string NotificationText { get; set; }
     }

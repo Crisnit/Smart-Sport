@@ -17,9 +17,9 @@ namespace SmartSport.Models
         public VideoItem() 
         {
             Id = 1;
-            Name = "1";
-            VideoSource = "https://public.kexogg.ru/URFU_MEME.mp4";
-            PreviewSource = "1";
+            Name = "Hips";
+            VideoSource = "https://public.kexogg.ru/Videos/Hips.mp4";
+            PreviewSource = "https://public.kexogg.ru/Videos/Hips.jpg";
         }
 
         public VideoItem(int id, string name, string videoSource, string previewSource)

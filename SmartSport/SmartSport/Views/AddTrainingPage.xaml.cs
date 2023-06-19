@@ -59,5 +59,10 @@ namespace SmartSport.Views
                 training.NotificationText = "Ваша тренировка начнётся " + training.StringDate + " в " + training.StringTime;
             }
         }
+        public void TextChanged (object sender, EventArgs e)
+        {
+            var training=(Training)BindingContext;
+            training.Note = editor.Text;
+        }
     }
 }

@@ -120,7 +120,7 @@ namespace SmartSport.Views
             Training training = new Training();
             AddTrainingPage addTrainingPage = new AddTrainingPage();
             addTrainingPage.BindingContext = training;
-            await Navigation.PushAsync(addTrainingPage);
+            await Navigation.PushAsync(addTrainingPage, true);
         }
     }
 }

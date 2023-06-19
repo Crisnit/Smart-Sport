@@ -4,10 +4,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SmartSport.Views.AddTrainingPage"
              BackgroundColor="White">
-    <ContentPage.Resources>
-        <ResourceDictionary/>
-    </ContentPage.Resources>
-        <RelativeLayout>
+    <RelativeLayout>
             <Button WidthRequest="50"
                     HeightRequest="30"
                     RelativeLayout.XConstraint="{ConstraintExpression Constant=-50, Factor=0.15, Property=Width, Type=RelativeToParent}"
@@ -44,7 +41,7 @@
                        HorizontalOptions="Center"/>
 
                     <Label
-                       Text="{Binding TrainingDateTime}" 
+                       Text="Выбрать дату:" 
                        TextColor="#9CBABB"
                        FontAttributes="Bold"
                        FontSize="14"/>
@@ -76,9 +73,11 @@
                         FontAttributes="Bold"/>
                     <Frame BorderColor="#9CBABB"
                            CornerRadius="30" HasShadow="False">
-                        <Editor TextColor="#9CBABB" Placeholder="Введите текст" PlaceholderColor="#9CBABB"
+                        <Editor x:Name="editor"
+                            TextColor="#9CBABB" Placeholder="Введите текст" PlaceholderColor="#9CBABB"
                                 HeightRequest="80"
-                                Text="{Binding Note}"/>
+                                Text="{Binding Note}"
+                                TextChanged="TextChanged"/>
                     </Frame>
                     <Label Text="Добавить новое видео:" 
                            TextColor="#9CBABB"
@@ -114,6 +113,8 @@
                            TextColor="#9CBABB"
                            FontSize="14"
                            FontAttributes="Bold"/>
+                    <WebView Source="{Binding Video.PreviewSource}" WidthRequest="320"
+                             HeightRequest="180"></WebView>
                     </StackLayout>
                 </ScrollView>
             </Frame>

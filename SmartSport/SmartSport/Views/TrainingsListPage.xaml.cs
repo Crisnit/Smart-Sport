@@ -22,7 +22,10 @@ namespace SmartSport.Views
         private void OnItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             var training=(Training)e.SelectedItem;
-            App.Database.DeleteItem(training.Id);
+            TrainingPage selectedTraining =new TrainingPage();
+            selectedTraining.BindingContext = training;
+            Navigation.PushAsync(selectedTraining, true);
+
         }
     }
 }

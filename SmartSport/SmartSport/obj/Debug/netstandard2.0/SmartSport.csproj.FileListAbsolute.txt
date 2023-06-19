@@ -21,3 +21,4 @@ C:\Users\amate\Desktop\SmartSport\SmartSport\SmartSport\obj\Debug\netstandard2.0
 C:\Users\amate\Desktop\SmartSport\SmartSport\SmartSport\obj\Debug\netstandard2.0\Views\AddTrainingPage.xaml.g.cs
 C:\Users\amate\Desktop\SmartSport\SmartSport\SmartSport\obj\Debug\netstandard2.0\Views\CarouselViewPage.xaml.g.cs
 C:\Users\amate\Desktop\SmartSport\SmartSport\SmartSport\obj\Debug\netstandard2.0\Views\TrainingsListPage.xaml.g.cs
+C:\Users\amate\Desktop\SmartSport\SmartSport\SmartSport\obj\Debug\netstandard2.0\Views\TrainingPage.xaml.g.cs

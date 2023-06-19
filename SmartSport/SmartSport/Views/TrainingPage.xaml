@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SmartSport.Views.TrainingPage"
+             BackgroundColor="White">
+    <ContentPage.Content>
+        <StackLayout Spacing="20">
+                <Label
+                       Text="Тренировка"
+                       TextColor="#18ABB2"
+                       FontSize="24"
+                       FontAttributes="Bold"
+                       HorizontalTextAlignment="Center"></Label>
+
+                <Label
+                       Text="Дата тренировки" 
+                       TextColor="#9CBABB"
+                       FontAttributes="Bold"
+                       FontSize="15"
+                    HorizontalTextAlignment="Center"/>
+            <Frame
+                        BorderColor="#9CBABB"
+                        CornerRadius="30" HasShadow="False">
+                <Label TextColor="#18ABB2"
+                           Text="{Binding TrainingDateTime.Date, StringFormat='{0:D}'}"
+                           HorizontalTextAlignment="Center"
+                           FontSize="15"
+                           FontAttributes="Bold">
+                </Label>
+            </Frame>
+            <Label 
+                        Text="Время тренировки" 
+                        TextColor="#9CBABB"
+                        FontSize="15"
+                        FontAttributes="Bold"
+                    HorizontalTextAlignment="Center"/>
+                <Frame BorderColor="#9CBABB"
+                           CornerRadius="30" HasShadow="False">
+                    <Label TextColor ="#18ABB2"
+                           Text="{Binding TrainingDateTime, StringFormat='{0:hh:mm}'}"
+                           HorizontalTextAlignment="Center"
+                           FontSize="15"
+                           FontAttributes="Bold"/>
+                </Frame>
+                <Label 
+                        Text="Заметки" 
+                        TextColor="#9CBABB"
+                        FontSize="15"
+                        FontAttributes="Bold"
+                    HorizontalTextAlignment="Center"/>
+                <Frame BorderColor="#9CBABB"
+                           CornerRadius="30" HasShadow="False">
+                    <Label TextColor="#18ABB2"
+                                HeightRequest="40"
+                                Text="{Binding Note}"/>
+                </Frame>
+                <Label Text="Прикрепленные видео" 
+                           TextColor="#9CBABB"
+                           FontSize="15"
+                           FontAttributes="Bold"
+                       HorizontalOptions="Center"/>
+                <WebView Source="{Binding Video.PreviewSource}" WidthRequest="320"
+                             HeightRequest="180"></WebView>
+                <Button x:Name="startTrainingButton"
+                        Text="Начать Тренировку"
+                        WidthRequest="500"
+                        BorderWidth="1"
+                        FontAttributes="Bold"
+                        TextColor="#18ABB2"
+                        FontSize="24"
+                        BackgroundColor="White"
+                        BorderColor="#9CBABB"
+                        CornerRadius="30"
+                        VerticalOptions="EndAndExpand"></Button>
+            </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
