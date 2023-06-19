@@ -53,7 +53,8 @@
                         CornerRadius="30" HasShadow="False">
                         <DatePicker x:Name="datePicker"
                             TextColor="#9CBABB" Format="dd/MM/yyyy"
-                                    Date="{Binding TrainingDateTime.Date}">
+                                    Date="{Binding TrainingDateTime.Date}"
+                                    DateSelected="DateSelected">
                         </DatePicker>
                     </Frame>
                     <Label 
@@ -63,8 +64,10 @@
                         FontAttributes="Bold"/>
                     <Frame BorderColor="#9CBABB"
                            CornerRadius="30" HasShadow="False">
-                           <TimePicker TextColor ="#9CBABB" Format="hh:mm"
-                                       Time="{Binding TrainingDateTime.TimeOfDay}"/>
+                        <TimePicker x:Name="timePicker"
+                               TextColor ="#9CBABB" Format="hh:mm"
+                               Time="{Binding TrainingDateTime.TimeOfDay}"
+                               PropertyChanged="TimeSelected"/>
                     </Frame>
                     <Label 
                         Text="Добавить заметку:" 

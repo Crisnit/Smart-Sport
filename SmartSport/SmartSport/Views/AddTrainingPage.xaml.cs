@@ -40,5 +40,24 @@ namespace SmartSport.Views
             if (training != null) { App.Database.SaveItem(training); }
             Navigation.PopAsync();
         }
+
+        public void DateSelected (object sender, EventArgs e)
+        {
+            var training =(Training)BindingContext;
+            training.StringDate =datePicker.Date.ToString("d");
+            training.TrainingDateTime = DateTime.Parse(training.StringDate + " " + training.StringTime);
+            training.NotificationText = "Ваша тренировка начнётся " + training.StringDate + " в " + training.StringTime;
+        }
+        
+        public void TimeSelected (object sender, System.ComponentModel.PropertyChangedEventArgs e)
+        {
+            if (e.PropertyName == "Time")
+            {
+                var training = (Training)BindingContext;
+                training.StringTime = timePicker.Time.ToString("hh\\:mm");
+                training.TrainingDateTime = DateTime.Parse(training.StringDate + " " + training.StringTime);
+                training.NotificationText = "Ваша тренировка начнётся " + training.StringDate + " в " + training.StringTime;
+            }
+        }
     }
 }

@@ -22,7 +22,8 @@ namespace SmartSport
         public CarouselViewPage ()
 		{
 			InitializeComponent ();
-			descriptions = new ObservableCollection<Carouselitems>
+            NavigationPage.SetHasNavigationBar(this, false);
+            descriptions = new ObservableCollection<Carouselitems>
 			{
 				new Carouselitems {Description = "Добро пожаловать в наше приложение SMART SPORT! " },
 				new Carouselitems {Description = "Сегодня у вас есть уникальная возможность начать новый путь в своей жизни - заняться спортом и стать лучшей версией себя. Наше приложение - ваш надежный помощник на этом сложном пути." },

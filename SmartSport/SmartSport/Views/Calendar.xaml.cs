@@ -27,9 +27,9 @@ namespace SmartSport.Views
             new MainPage();
         }
 
-        private void NotificationButtonClicked(object sender, EventArgs e)
+        private async void NotificationButtonClicked(object sender, EventArgs e)
         {
-            new MainPage();
+            await Navigation.PushAsync(new TrainingsListPage());
         }
         
         public static DateTime DayOfCurrentMonth = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1);
