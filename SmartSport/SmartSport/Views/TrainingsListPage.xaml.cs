@@ -21,11 +21,20 @@ namespace SmartSport.Views
 
         private void OnItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            var training=(Training)e.SelectedItem;
-            TrainingPage selectedTraining =new TrainingPage();
-            selectedTraining.BindingContext = training;
+            var training=(Training)e.SelectedItem;         
+            TrainingPage selectedTraining = new TrainingPage(training);
             Navigation.PushAsync(selectedTraining, true);
-
+        }
+        private async void AddTrainingButton(object sender, EventArgs e)
+        {
+            Training training = new Training();
+            AddTrainingPage addTrainingPage = new AddTrainingPage();
+            addTrainingPage.BindingContext = training;
+            await Navigation.PushAsync(addTrainingPage, true);
+        }
+        async void CalendarButtonClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Calendar(), true);
         }
     }
 }

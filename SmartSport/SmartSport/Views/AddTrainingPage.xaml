@@ -130,7 +130,7 @@
                 <StackLayout Orientation="Horizontal" Spacing="30">
                     <Button BackgroundColor="Transparent" ImageSource="home.png" WidthRequest="48"/>
                     <Button BackgroundColor="Transparent" ImageSource="search.png" WidthRequest="48"/>
-                    <Button BackgroundColor="Transparent" ImageSource="add.png" WidthRequest="48" Clicked="SaveTraining"/>
+                    <Button BackgroundColor="Transparent" ImageSource="tick.png" WidthRequest="48" Clicked="SaveTraining"/>
                     <Button BackgroundColor="Transparent" ImageSource="favorite.png" WidthRequest="48"/>
                     <Button BackgroundColor="Transparent" ImageSource="calendar.png" WidthRequest="48" Clicked="CalendarButtonClicked"/>
                 </StackLayout>

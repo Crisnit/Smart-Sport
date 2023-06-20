@@ -46,7 +46,7 @@ namespace SmartSport.Views
             }
             else if ((int)day.DayOfWeek!=0 && (int)day.DayOfWeek!=6)
             {
-                CalendarGrid.Children.Add(new Button { BackgroundColor = Color.White, WidthRequest = 40, HeightRequest = 40, Padding = 9, CornerRadius = 1000, Text = day.ToString("dd.MM.yyyy"), TextColor = Color.Black, FontAttributes = FontAttributes.Bold, FontSize = 16}, column, row);
+                CalendarGrid.Children.Add(new Button {BackgroundColor = Color.White, WidthRequest = 40, HeightRequest = 40, Padding = 9, CornerRadius = 1000, Text = day.ToString("dd.MM.yyyy"), TextColor = Color.Black, FontAttributes = FontAttributes.Bold, FontSize = 16}, column, row);
             }
             else
             {

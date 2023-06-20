@@ -9,9 +9,11 @@ namespace SmartSport.Models
     {
         public VideoItems() 
         { 
+           var video=new VideoItem();
+
            Items = new Dictionary<int, VideoItem>()
            {
-               {1, new VideoItem() }
+               {1, video }
            };
         }
 

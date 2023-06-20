@@ -27,7 +27,7 @@ namespace SmartSport.Views
 
         private void NotificationButtonClicked(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            Navigation.PushAsync(new TrainingsListPage());
         }
         async void CalendarButtonClicked(object sender, EventArgs e)
         {

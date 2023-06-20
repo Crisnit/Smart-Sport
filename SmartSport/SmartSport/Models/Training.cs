@@ -14,7 +14,7 @@ namespace SmartSport.Models
         public Training() 
         {
             TrainingDateTime = DateTime.Now;
-            Note = "1";
+            Note = "";
             VideoId = 1;
             StringDate= TrainingDateTime.ToString("d");
             StringTime = TrainingDateTime.TimeOfDay.ToString("hh\\:mm");

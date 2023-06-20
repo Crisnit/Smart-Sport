@@ -4,22 +4,51 @@
              x:Class="SmartSport.Views.TrainingsListPage">
     <ContentPage.Content>
         <StackLayout>
-            <ListView x:Name="trainingsList" ItemsSource="{Binding trainingsList}" ItemSelected="OnItemSelected">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell>
-                            <StackLayout Orientation="Horizontal">
-                                <Label Text="{Binding NotificationText}"
-                                       TextColor="#18ABB2"
-                                       FontSize="15"
-                                       FontAttributes="Bold"
-                                       HorizontalOptions="CenterAndExpand"
-                                       ></Label>
-                            </StackLayout>
-                        </ViewCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
+            <RelativeLayout>
+                <StackLayout Spacing="10"
+                             RelativeLayout.YConstraint="5">
+                <Button WidthRequest="50"
+                    HeightRequest="30"               
+                Opacity="1"
+                CornerRadius="50"
+                ImageSource="burgermenu.png"
+                BackgroundColor="Transparent"
+                HorizontalOptions="Start"/>
+                <ListView x:Name="trainingsList" ItemsSource="{Binding trainingsList}" ItemSelected="OnItemSelected">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding NotificationText}"
+                                        TextColor="#18ABB2"
+                                        FontSize="15"
+                                        FontAttributes="Bold"
+                                        HorizontalOptions="CenterAndExpand">
+                                            
+                                    </Label>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                </StackLayout>
+                <Frame RelativeLayout.WidthConstraint="400"
+                   RelativeLayout.HeightConstraint="95"
+                   RelativeLayout.YConstraint="730"
+                   RelativeLayout.XConstraint="-5"
+                   CornerRadius="30"
+                   BackgroundColor="White"                
+                   HasShadow="True"
+                   BorderColor="#F3EBEB">
+                    <StackLayout Orientation="Horizontal" Spacing="30">
+                        <Button BackgroundColor="Transparent" ImageSource="home.png" WidthRequest="48"/>
+                        <Button BackgroundColor="Transparent" ImageSource="search.png" WidthRequest="48"/>
+                        <Button BackgroundColor="Transparent" ImageSource="add.png" WidthRequest="48" Clicked="AddTrainingButton"/>
+                        <Button BackgroundColor="Transparent" ImageSource="favorite.png" WidthRequest="48"/>
+                        <Button BackgroundColor="Transparent" ImageSource="calendar.png" WidthRequest="48" Clicked="CalendarButtonClicked"/>
+                    </StackLayout>
+                </Frame>
+            </RelativeLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -4,7 +4,7 @@
              x:Class="SmartSport.Views.TrainingPage"
              BackgroundColor="White">
     <ContentPage.Content>
-        <StackLayout Spacing="20">
+        <StackLayout Spacing="30">
                 <Label
                        Text="Тренировка"
                        TextColor="#18ABB2"
@@ -37,7 +37,7 @@
                 <Frame BorderColor="#9CBABB"
                            CornerRadius="30" HasShadow="False">
                     <Label TextColor ="#18ABB2"
-                           Text="{Binding TrainingDateTime, StringFormat='{0:hh:mm}'}"
+                           Text="{Binding TrainingDateTime, StringFormat='{0:HH:mm}'}"
                            HorizontalTextAlignment="Center"
                            FontSize="15"
                            FontAttributes="Bold"/>
@@ -59,9 +59,11 @@
                            FontSize="15"
                            FontAttributes="Bold"
                        HorizontalOptions="Center"/>
-                <WebView Source="{Binding Video.PreviewSource}" WidthRequest="320"
-                             HeightRequest="180"></WebView>
-                <Button x:Name="startTrainingButton"
+            <Button x:Name="Video"
+                    BackgroundColor="Transparent" 
+                    TextColor="#18ABB2"
+                    HorizontalOptions="StartAndExpand"></Button>
+            <Button x:Name="startTrainingButton"
                         Text="Начать Тренировку"
                         WidthRequest="500"
                         BorderWidth="1"
@@ -71,7 +73,8 @@
                         BackgroundColor="White"
                         BorderColor="#9CBABB"
                         CornerRadius="30"
-                        VerticalOptions="EndAndExpand"></Button>
+                        VerticalOptions="EndAndExpand"
+                    Clicked="StartTraining"></Button>
             </StackLayout>
     </ContentPage.Content>
 </ContentPage>
