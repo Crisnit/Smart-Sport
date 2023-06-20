@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             BackgroundColor="White"
+             BackgroundImageSource="regbackground.jpg"
+             x:Class="SmartSport.Views.login">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Добрый день!" FontSize="27"
+                       FontAttributes="Bold" TextColor="#18ABB2"
+                HorizontalOptions="Center"
+                Padding="0,150,0,0"/>
+            <Label FontSize="14" TextColor="#9CBABB"
+                       FontAttributes="Bold" Text="Введите свою почту и пароль, чтобы войти" 
+                HorizontalOptions="Center"
+            />
+            <Frame  Margin="16,50,16,0" BorderColor="#9CBABB"
+                           CornerRadius="30" HasShadow="False">
+                <Editor TextColor="#9CBABB" Placeholder="IvanIvanov@gmail.com" PlaceholderColor="#9CBABB">
+                </Editor>
+            </Frame>
+            <Frame BorderColor="#9CBABB"  Margin="16,0,16,0"
+                           CornerRadius="30" HasShadow="False">
+                <Editor TextColor="#9CBABB" Placeholder="Пароль" PlaceholderColor="#9CBABB">
+                </Editor>
+            </Frame>
+            <Button BackgroundColor="Transparent" ImageSource="enter.png" Clicked="Entering"></Button>
+            <Button BackgroundColor="Transparent" TextColor="#18ABB2" Text="Нет аккаунта?Зарегестрируйтесь" Clicked="Reging"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
