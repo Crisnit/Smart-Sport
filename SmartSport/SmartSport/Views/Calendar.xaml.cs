@@ -118,9 +118,14 @@ namespace SmartSport.Views
         private async void AddTrainingButton(object sender, EventArgs e)
         {
             Training training = new Training();
-            AddTrainingPage addTrainingPage = new AddTrainingPage();
-            addTrainingPage.BindingContext = training;
+            AddTrainingPage addTrainingPage = new AddTrainingPage(training);
             await Navigation.PushAsync(addTrainingPage, true);
+        }
+
+        public async void SearchButtonClicked(object sender, EventArgs e)
+        {
+            SearchView searchView = new SearchView();
+            await Navigation.PushAsync(searchView, true);
         }
     }
 }

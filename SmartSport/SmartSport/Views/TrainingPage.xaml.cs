@@ -18,11 +18,14 @@ namespace SmartSport.Views
             Training = training;
             InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);
-            BindingContext = training;
-            var videoDictionary = new VideoItems().Items;
-            VideoItem = videoDictionary[training.VideoId];
-            Video.ImageSource = VideoItem.PreviewSource;
-            Video.Text = VideoItem.Name;
+            BindingContext = Training;
+            var videoDictionary = new VideoItems().ItemsDictionary;
+            if (Training.VideoId != 0)
+            {
+                VideoItem = videoDictionary[Training.VideoId];
+                Video.ImageSource = VideoItem.PreviewSource;
+                Video.Text = VideoItem.Name;
+            }
         }
         public VideoItem VideoItem { get; set; }
         public Training Training { get; set; }

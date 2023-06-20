@@ -15,7 +15,8 @@ namespace SmartSport.Views
 		public Registering ()
 		{
 			InitializeComponent ();
-		}
+            NavigationPage.SetHasNavigationBar(this, false);
+        }
         private async void Next(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new Calendar(), true);

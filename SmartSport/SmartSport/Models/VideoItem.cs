@@ -19,7 +19,7 @@ namespace SmartSport.Models
             Id = 1;
             Name = "Hips Dips Workout";
             VideoSource = "https://public.kexogg.ru/Videos/Hips.mp4";
-            PreviewSource = "hips.jpg";
+            PreviewSource = "hips.png";
         }
 
         public VideoItem(int id, string name, string videoSource, string previewSource)

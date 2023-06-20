@@ -4,7 +4,8 @@
              x:Class="SmartSport.Views.TrainingPage"
              BackgroundColor="White">
     <ContentPage.Content>
-        <StackLayout Spacing="30">
+        <StackLayout Spacing="10" Margin="5"
+                     VerticalOptions="FillAndExpand">
                 <Label
                        Text="Тренировка"
                        TextColor="#18ABB2"
@@ -12,18 +13,18 @@
                        FontAttributes="Bold"
                        HorizontalTextAlignment="Center"></Label>
 
-                <Label
+                <Label Margin="10"
                        Text="Дата тренировки" 
                        TextColor="#9CBABB"
                        FontAttributes="Bold"
                        FontSize="15"
-                    HorizontalTextAlignment="Center"/>
-            <Frame
-                        BorderColor="#9CBABB"
+                    HorizontalTextAlignment="Start"
+                    />
+            <Frame      BorderColor="#9CBABB"
                         CornerRadius="30" HasShadow="False">
-                <Label TextColor="#18ABB2"
+                <Label TextColor="#9CBABB"
                            Text="{Binding TrainingDateTime.Date, StringFormat='{0:D}'}"
-                           HorizontalTextAlignment="Center"
+                           HorizontalTextAlignment="Start"
                            FontSize="15"
                            FontAttributes="Bold">
                 </Label>
@@ -33,12 +34,13 @@
                         TextColor="#9CBABB"
                         FontSize="15"
                         FontAttributes="Bold"
-                    HorizontalTextAlignment="Center"/>
+                    HorizontalTextAlignment="Start"
+                Margin="10"/>
                 <Frame BorderColor="#9CBABB"
                            CornerRadius="30" HasShadow="False">
-                    <Label TextColor ="#18ABB2"
+                <Label TextColor ="#9CBABB"
                            Text="{Binding TrainingDateTime, StringFormat='{0:HH:mm}'}"
-                           HorizontalTextAlignment="Center"
+                           HorizontalTextAlignment="Start"
                            FontSize="15"
                            FontAttributes="Bold"/>
                 </Frame>
@@ -47,10 +49,11 @@
                         TextColor="#9CBABB"
                         FontSize="15"
                         FontAttributes="Bold"
-                    HorizontalTextAlignment="Center"/>
+                    HorizontalTextAlignment="Start"
+                    Margin="10"/>
                 <Frame BorderColor="#9CBABB"
                            CornerRadius="30" HasShadow="False">
-                    <Label TextColor="#18ABB2"
+                <Label TextColor="#9CBABB"
                                 HeightRequest="40"
                                 Text="{Binding Note}"/>
                 </Frame>
@@ -58,7 +61,8 @@
                            TextColor="#9CBABB"
                            FontSize="15"
                            FontAttributes="Bold"
-                       HorizontalOptions="Center"/>
+                       HorizontalOptions="Start"
+                       Margin="10"/>
             <Button x:Name="Video"
                     BackgroundColor="Transparent" 
                     TextColor="#18ABB2"

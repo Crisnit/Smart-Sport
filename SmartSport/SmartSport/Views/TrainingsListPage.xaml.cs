@@ -28,8 +28,7 @@ namespace SmartSport.Views
         private async void AddTrainingButton(object sender, EventArgs e)
         {
             Training training = new Training();
-            AddTrainingPage addTrainingPage = new AddTrainingPage();
-            addTrainingPage.BindingContext = training;
+            AddTrainingPage addTrainingPage = new AddTrainingPage(training);
             await Navigation.PushAsync(addTrainingPage, true);
         }
         async void CalendarButtonClicked(object sender, EventArgs e)

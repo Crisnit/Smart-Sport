@@ -15,7 +15,8 @@ namespace SmartSport.Views
 		public login ()
 		{
 			InitializeComponent ();
-		}
+            NavigationPage.SetHasNavigationBar(this, false);
+        }
         private async void Entering(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new Calendar(), true);

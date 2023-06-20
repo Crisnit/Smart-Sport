@@ -107,14 +107,17 @@
                             WidthRequest="90"
                             HeightRequest="15"
                             Margin="-5,0,0,0"
-                            FontSize="14"/>
+                            FontSize="14"
+                            Clicked="SearchButtonClicked"/>
                     </StackLayout>
                     <Label Text="Прикрепленные видео:" 
                            TextColor="#9CBABB"
                            FontSize="14"
                            FontAttributes="Bold"/>
-                    <WebView Source="{Binding Video.PreviewSource}" WidthRequest="320"
-                             HeightRequest="180"></WebView>
+                    <Button x:Name="Video"
+                    BackgroundColor="Transparent" 
+                    TextColor="#18ABB2"
+                    HorizontalOptions="StartAndExpand"></Button>
                     </StackLayout>
                 </ScrollView>
             </Frame>
@@ -129,7 +132,7 @@
                    BorderColor="#F3EBEB">
                 <StackLayout Orientation="Horizontal" Spacing="30">
                     <Button BackgroundColor="Transparent" ImageSource="home.png" WidthRequest="48"/>
-                    <Button BackgroundColor="Transparent" ImageSource="search.png" WidthRequest="48"/>
+                    <Button BackgroundColor="Transparent" ImageSource="search.png" WidthRequest="48" Clicked="SearchButtonClicked"/>
                     <Button BackgroundColor="Transparent" ImageSource="tick.png" WidthRequest="48" Clicked="SaveTraining"/>
                     <Button BackgroundColor="Transparent" ImageSource="favorite.png" WidthRequest="48"/>
                     <Button BackgroundColor="Transparent" ImageSource="calendar.png" WidthRequest="48" Clicked="CalendarButtonClicked"/>

@@ -174,7 +174,7 @@
                    BorderColor="#F3EBEB">
                     <StackLayout Orientation="Horizontal" Spacing="30">
                         <Button BackgroundColor="Transparent" ImageSource="home.png" WidthRequest="48"></Button>
-                        <Button BackgroundColor="Transparent" ImageSource="search.png" WidthRequest="48"></Button>
+                        <Button BackgroundColor="Transparent" ImageSource="search.png" WidthRequest="48" Clicked="SearchButtonClicked"></Button>
                         <Button BackgroundColor="Transparent" ImageSource="add.png" WidthRequest="48" Clicked="AddTrainingButton"></Button>
                         <Button BackgroundColor="Transparent" ImageSource="favorite.png" WidthRequest="48"></Button>
                         <Button BackgroundColor="Transparent" ImageSource="calendar_colour.png" WidthRequest="48"></Button>

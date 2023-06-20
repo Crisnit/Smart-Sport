@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SmartSport.Views.SearchView">
+    <ContentPage.Content>
+        <StackLayout>
+            <RelativeLayout>
+                <Button WidthRequest="50"
+                    HeightRequest="30"
+                    RelativeLayout.XConstraint="{ConstraintExpression Constant=-50, Factor=0.15, Property=Width, Type=RelativeToParent}"
+                    RelativeLayout.YConstraint="{ConstraintExpression Constant=-65, Factor=0.1, Property=Height, Type=RelativeToParent}"               
+                Opacity="1"
+                CornerRadius="50"
+                ImageSource="burgermenu.png"
+                BackgroundColor="Transparent"/>
+                <Button WidthRequest="50"
+                    HeightRequest="30"
+                    RelativeLayout.XConstraint="{ConstraintExpression Constant=-50, Factor=0.8, Property=Width, Type=RelativeToParent}"
+                    RelativeLayout.YConstraint="{ConstraintExpression Constant=-65, Factor=0.1, Property=Height, Type=RelativeToParent}"
+                    ImageSource="notification.png"
+                    Opacity="1"
+                    Clicked="NotificationButtonClicked"
+                    CornerRadius="50"
+                    BackgroundColor="Transparent"/>
+                <Label Text="Название тренировки" RelativeLayout.XConstraint="60"
+                       RelativeLayout.YConstraint="210"
+                       TextColor="#18ABB2" FontSize="24" FontAttributes="Bold"></Label>
+                <Frame WidthRequest="343"
+                       HeightRequest="19"
+                       RelativeLayout.XConstraint="5"
+                       RelativeLayout.YConstraint="250"
+                       CornerRadius="25"
+                       Padding="20" BackgroundColor="#E6E6E6">
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Fill" Margin="-10" WidthRequest="343">
+                        <Entry x:Name="entry"
+                            Margin="0" HorizontalOptions="Center" WidthRequest="300" 
+                               Placeholder="Поиск" 
+                               PlaceholderColor="#18ABB2"></Entry>
+                    <Button WidthRequest="50" HeightRequest="30" HorizontalOptions="End" 
+                            ImageSource="search.png" 
+                            BackgroundColor="Transparent"
+                            Clicked="SearchClicked"></Button>
+                    </StackLayout>
+                </Frame>
+                <ScrollView RelativeLayout.YConstraint="350"
+                            RelativeLayout.XConstraint="10">
+                    <ListView x:Name="videoItemsList" ItemsSource="{Binding videoItemsList}"
+                              SeparatorVisibility="Default"
+                              SeparatorColor="#9CBABB"
+                              RowHeight="92"
+                              VerticalOptions="Center"
+                              ItemSelected="VideoSelected" IsVisible="false">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <StackLayout Orientation="Horizontal">
+                                        <Image Source="{Binding PreviewSource}"></Image>
+                                        <Label Text="{Binding Name}" FontSize="15"
+                                               TextColor="#18ABB2"
+                                               FontAttributes="Bold"
+                                               HorizontalOptions="StartAndExpand"
+                                               VerticalOptions="Start"></Label>
+                                    </StackLayout>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </ScrollView>
+                <Frame RelativeLayout.WidthConstraint="400"
+                   RelativeLayout.HeightConstraint="95"
+                   RelativeLayout.YConstraint="730"
+                   RelativeLayout.XConstraint="-5"
+                   CornerRadius="30"
+                   BackgroundColor="White"                
+                   HasShadow="True"
+                   BorderColor="#F3EBEB">
+                    <StackLayout Orientation="Horizontal" Spacing="30">
+                        <Button BackgroundColor="Transparent" ImageSource="home.png" WidthRequest="48"/>
+                        <Button BackgroundColor="Transparent" ImageSource="search.png" WidthRequest="48"/>
+                        <Button BackgroundColor="Transparent" ImageSource="add.png" WidthRequest="48" Clicked="AddTrainingButton"/>
+                        <Button BackgroundColor="Transparent" ImageSource="favorite.png" WidthRequest="48"/>
+                        <Button BackgroundColor="Transparent" ImageSource="calendar.png" WidthRequest="48" Clicked="CalendarButtonClicked"/>
+                    </StackLayout>
+                </Frame>
+            </RelativeLayout>
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

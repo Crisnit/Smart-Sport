@@ -659,5 +659,9 @@ C:\Users\amate\Desktop\SmartSport\SmartSport\SmartSport.Android\obj\Debug\120\an
 C:\Users\amate\Desktop\SmartSport\SmartSport\SmartSport.Android\obj\Debug\120\android\assets\System.Memory.dll
 C:\Users\amate\Desktop\SmartSport\SmartSport\SmartSport.Android\obj\Debug\120\android\assets\System.Runtime.CompilerServices.Unsafe.dll
 C:\Users\amate\Desktop\SmartSport\SmartSport\SmartSport.Android\obj\Debug\120\res\drawable\icon.png
-C:\Users\amate\Desktop\SmartSport\SmartSport\SmartSport.Android\obj\Debug\120\res\drawable\hips.jpg
 C:\Users\amate\Desktop\SmartSport\SmartSport\SmartSport.Android\obj\Debug\120\res\drawable\tick.png
+C:\Users\amate\Desktop\SmartSport\SmartSport\SmartSport.Android\obj\Debug\120\res\drawable\hips.png
+C:\Users\amate\Desktop\SmartSport\SmartSport\SmartSport.Android\obj\Debug\120\res\drawable\carouselnext.png
+C:\Users\amate\Desktop\SmartSport\SmartSport\SmartSport.Android\obj\Debug\120\res\drawable\smart.png
+C:\Users\amate\Desktop\SmartSport\SmartSport\SmartSport.Android\obj\Debug\120\res\drawable\next.jpg
+C:\Users\amate\Desktop\SmartSport\SmartSport\SmartSport.Android\obj\Debug\120\res\drawable\enter.png

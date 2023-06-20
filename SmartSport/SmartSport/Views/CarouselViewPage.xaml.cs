@@ -35,7 +35,7 @@ namespace SmartSport
         }
         private async void OnButtonClicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new Calendar(), true);
+            await Navigation.PushAsync(new login(), true);
         }
     }
 

@@ -24,7 +24,6 @@
                                         FontSize="15"
                                         FontAttributes="Bold"
                                         HorizontalOptions="CenterAndExpand">
-                                            
                                     </Label>
                                 </StackLayout>
                             </ViewCell>
